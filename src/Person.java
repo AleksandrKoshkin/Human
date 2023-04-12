@@ -26,7 +26,7 @@ public class Person {
     }
 
     public boolean hasAddress() {
-        if (address.equals(null)) {
+        if (address == null) {
             return false;
         } else {
             return true;
