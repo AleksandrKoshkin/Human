@@ -42,7 +42,11 @@ public class Person {
     }
 
     public OptionalInt getAge() {
-        return OptionalInt.of(age);
+        if (hasAge()) {
+            return OptionalInt.of(age);
+        }else {
+            return OptionalInt.empty() ;
+        }
     }
 
     public String getAddress() {
@@ -63,7 +67,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return name + " " + surname + " Age " + age + " " + address;
+        return name + " " + surname +" "+ age + " " + address;
     }
 
     @Override
